@@ -10,20 +10,20 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="header">
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About </a></li>
-          <li><a href="#">Porfolio</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">blog</a></li>
-          <a href="#" class="login">login</a>
-        </ul>
-      </nav>
-    </header>
     <section class="hero">
       <div class="hero-container">
+        <nav>
+          <a href=""><i class="fa-solid fa-bars" id="icon"></i></a>
+
+          <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About </a></li>
+            <li><a href="#">Porfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#" class="login">login</a></li>
+          </ul>
+        </nav>
         <div class="hero-left">
           <p class="hero-p">welcome to my web page</p>
           <h1 class="hero-header">I'm Benjamin <br />software enginner</h1>
@@ -140,8 +140,9 @@
             </li>
           </ul>
         </div>
+
         <div class="message">
-          <h3>I would like to hear from you</h3>
+          <h3>i would like to hear from you</h3>
           <form>
             <div class="name">
               <input
@@ -188,5 +189,29 @@
         </div>
       </div>
     </footer>
+    <script>
+      // const toggleButton = document.querySelector(".fa-bars");
+      // const navbarLinks = document.querySelector(".navbar-links");
+      // toggleButton.addEventListener("click", () => {
+      //   navbarLinks.classList.toggle("active");
+      // });
+
+      // const navbar = document.querySelector(".navbar-links");
+      // const togglemenu = document.querySelector(".fa-bars");
+      // togglemenu.addEventListener("click", () => {
+      //   navbar.classList.toggle(".active");
+      // });
+
+      let menu = document.querySelector("#icon");
+      let navbar = document.querySelector(".nav");
+
+      menu.onclick = () => {
+        navbar.classList.toggle("active");
+      };
+
+      window.onscroll = () => {
+        navbar.classList.remove("active");
+      };
+    </script>
   </body>
 </html>
