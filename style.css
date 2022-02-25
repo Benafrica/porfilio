@@ -250,6 +250,13 @@ nav a {
 .message form {
   padding: 20px;
 }
+.message form input {
+  margin: 10px;
+}
+.textarea {
+  margin-left: 10px;
+  padding-right: -10px;
+}
 
 input[type="text"],
 textarea,
