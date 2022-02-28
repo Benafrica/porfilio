@@ -6,29 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>benafrica||resume</title>
     <link rel="stylesheet" href="./login.css" />
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   </head>
   <body>
     <section class="login">
       <div class="login-container">
         <h1>Login Here</h1>
-        <div class="email">
-          <input type="email" id="Email" placeholder="Enter email" />
-        </div>
-        <div class="password">
-          <input type="password" id="password" placeholder=" Enter password" />
-        </div>
-        <a href="file:///C:/Users/TRUTH/Desktop/capstone%20project/index.html"
-          >Go back</a
-        >
-
-        <a
-          href="file:///C:/Users/TRUTH/Desktop/capstone%20project/casptone-project/dashboard/dash.html"
-          ><button class="">login</button></a
-        >
+        <form id="login-form" method="POST">
+          <div class="email">
+            <input type="email" id="loginEmail" placeholder="Enter email" />
+          </div>
+          <div class="password">
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder=" Enter password"
+            />
+          </div>
+          <a href="../index.html"> Go Back</a>
+          <button id="btnlogin">Login</button>
+        </form>
       </div>
     </section>
-    <script src="/casptone-project/dashboard/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyAZKTQXCanMtPDenQUSokW2MXNin6cwRdo",
+        authDomain: "personal-website-de780.firebaseapp.com",
+        projectId: "personal-website-de780",
+        storageBucket: "personal-website-de780.appspot.com",
+        messagingSenderId: "988685245259",
+        appId: "1:988685245259:web:c3dee8156ca0b58e2ea6ce",
+        measurementId: "G-CX3XY2GCYJ",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+    </script>
+
+    <script src="./login.js"></script>
   </body>
 </html>

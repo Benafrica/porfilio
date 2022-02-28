@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./font owsome/all.min.css" />
     <link rel="stylesheet" href="./font owsome/fontawesome.min.css" />
     <link rel="stylesheet" href="./style.css" />
+  
   </head>
   <body>
     <section class="hero">
@@ -43,7 +44,7 @@
     </section>
     <section class="about">
       <div class="about-container">
-        <h2><a name="about"></a>About me</h2>
+        <h2>About me</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In integer
           porttitor non risus at risus amet, risus. Consectetur quam blandit ut>
@@ -143,24 +144,19 @@
 
         <div class="message">
           <h3>i would like to hear from you</h3>
-          <form>
-            <div class="name">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter name"
-              />
+          <form id="messages-form" action="POST">
+            <div>
+              <input type="text" class="form-control" placeholder="Enter name" id="name" />
             </div>
             <div class="email">
-              <input type="email" id="Email" placeholder="Enter email" />
+              <input type="email" id="email" placeholder="Enter email" />
             </div>
 
             <div class="textarea">
-              <textarea class="form-control" placeholder="Enter your message">
-              </textarea>
+              <textarea class="form-control" placeholder="Enter your message" id="messageQuerry" ></textarea>
             </div>
             <div class="submit-button">
-              <input type="submit" class="button" />
+              <button id="message-submit">submit</button>
             </div>
           </form>
         </div>
@@ -213,5 +209,10 @@
         navbar.classList.remove("active");
       };
     </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="./index.js"></script>
   </body>
 </html>
