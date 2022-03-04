@@ -22,12 +22,4 @@ loginButton.addEventListener("click", (e) => {
     });
 });
 
-//user logout
 
-// const logout = document.querySelector("#logout");
-// logout.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   auth.signOut();
-//   window.location.href =
-//     "file:///C:/Users/TRUTH/Desktop/capstone%20project/index.html";
-// });

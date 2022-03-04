@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./font owsome/all.min.css" />
     <link rel="stylesheet" href="./font owsome/fontawesome.min.css" />
     <link rel="stylesheet" href="./style.css" />
-  
   </head>
   <body>
     <section class="hero">
@@ -46,30 +45,15 @@
       <div class="about-container">
         <h2>About me</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In integer
-          porttitor non risus at risus amet, risus. Consectetur quam blandit ut>
-          malesuada faucibus bibendum pretium, sed non. Senectus magna velit
-          tristique mi. Enim urna neque, habitasse vel justo, tortor et, est.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In integer
-          porttitor non risus at risus amet, risus. Consectetur quam blandit ut
-          Senectus magna velit tristique mi. Enim urna neque, habitasse vel
-          justo, tortor et, est.Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. In integer porttitor non risus at risus amet, risus.
-          Consectetur quam blandit ut> malesuada faucibus bibendum pretium, sed
-          non. Senectus magna velit tristique mi. Enim urna neque, habitasse vel
-          justo, tortor et, est. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. In integer porttitor non risus at risus amet, risus.
-          Consectetur quam blandit ut Senectus magna velit tristique mi. Enim
-          urna neque, habitasse vel justo, tortor et, est.Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. In integer porttitor non risus at
-          risus amet, risus. Consectetur quam blandit ut> malesuada faucibus
-          bibendum pretium, sed non. Senectus magna velit tristique mi. Enim
-          urna neque, habitasse vel justo, tortor et, est. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. In integer porttitor non risus at
-          risus amet, risus. Consectetur quam blandit ut Senectus magna velit
-          tristique mi. Enim urna neque, habitasse vel justo, tortor et,
-          est.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-          integer porttitor non risus at risus amet, risus. Consectetur quam
+          I'm an experienced software engineer who constantly seeks out
+          innovative solutions to everyday problem I've honed my analytical
+          thinking and collaboration skills, and I love working with a team.
+          I've also had the opportunity to serve as the software engineer lead
+          for three projects with First Technology.,and my commitment to
+          critical thinking and attention to detail have gotten me to where I am
+          today a junior software engineer for First Technology. I have a
+          passion for processes, and I'm a junior developer who typically helps
+          other developers at any given time.
         </p>
         <a href="#" class="learn-more">learn More</a>
       </div>
@@ -146,14 +130,30 @@
           <h3>i would like to hear from you</h3>
           <form id="messages-form" action="POST">
             <div>
-              <input type="text" class="form-control" placeholder="Enter name" id="name" />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter name"
+                id="name"
+                required
+              />
             </div>
             <div class="email">
-              <input type="email" id="email" placeholder="Enter email" />
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter email"
+                required
+              />
             </div>
 
             <div class="textarea">
-              <textarea class="form-control" placeholder="Enter your message" id="messageQuerry" ></textarea>
+              <textarea
+                class="form-control"
+                placeholder="Enter your message"
+                id="messageQuerry"
+                required
+              ></textarea>
             </div>
             <div class="submit-button">
               <button id="message-submit">submit</button>
@@ -214,5 +214,27 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
     <script src="./index.js"></script>
+    <script>
+      const form = document.getElementById("messages-form");
+      const username = document.getElementById("name");
+      const email = document.getElementById("email");
+      const message = document.getElementById("messageQuerry");
+
+      function output() {
+        let regEmail =
+          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        let x = document.getElementById("email").value;
+        if (x === "") {
+          document.getElementById("caption").innerHTML =
+            "please enter your email";
+        } else if (regEmail.test(x)) {
+          document.getElementById("caption").innerHTML = "sucess";
+        } else {
+          document.getElementById("caption").innerHTML =
+            "check your email please";
+        }
+      }
+    </script>
   </body>
 </html>

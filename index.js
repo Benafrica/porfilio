@@ -35,3 +35,5 @@ const createQuerry = () => {
 const clearForm = () => {
   form.reset();
 };
+   
+
