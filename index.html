@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bentech.rw</title>
+    <title>Benafrica||resume</title>
     <link rel="stylesheet" href="./font owsome/all.min.css" />
     <link rel="stylesheet" href="./font owsome/fontawesome.min.css" />
     <link rel="stylesheet" href="./style.css" />
@@ -17,19 +17,19 @@
 
           <ul class="nav">
             <li><a href="#">Home</a></li>
-            <li><a href="#">About </a></li>
+            <li><a href="#about">About </a></li>
             <li><a href="#">Porfolio</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#" class="login">login</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="./casptone-project/blog/blog.html ">blog</a></li>
+            <li><a href="./login/login.html" class="login">login</a></li>
           </ul>
         </nav>
         <div class="hero-left">
           <p class="hero-p">welcome to my web page</p>
           <h1 class="hero-header">I'm Benjamin <br />software enginner</h1>
           <p class="hero-sub-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-            Enim ornare mauris, eu enim ornare.
+            I love to dig into my customers needs and propose technological
+            <br />solutions notably through software development
           </p>
           <div class="Porfolio">
             <h2><a href="#">Porfolio</a></h2>
@@ -45,36 +45,21 @@
       <div class="about-container">
         <h2>About me</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In integer
-          porttitor non risus at risus amet, risus. Consectetur quam blandit ut>
-          malesuada faucibus bibendum pretium, sed non. Senectus magna velit
-          tristique mi. Enim urna neque, habitasse vel justo, tortor et, est.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In integer
-          porttitor non risus at risus amet, risus. Consectetur quam blandit ut
-          Senectus magna velit tristique mi. Enim urna neque, habitasse vel
-          justo, tortor et, est.Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. In integer porttitor non risus at risus amet, risus.
-          Consectetur quam blandit ut> malesuada faucibus bibendum pretium, sed
-          non. Senectus magna velit tristique mi. Enim urna neque, habitasse vel
-          justo, tortor et, est. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. In integer porttitor non risus at risus amet, risus.
-          Consectetur quam blandit ut Senectus magna velit tristique mi. Enim
-          urna neque, habitasse vel justo, tortor et, est.Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. In integer porttitor non risus at
-          risus amet, risus. Consectetur quam blandit ut> malesuada faucibus
-          bibendum pretium, sed non. Senectus magna velit tristique mi. Enim
-          urna neque, habitasse vel justo, tortor et, est. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. In integer porttitor non risus at
-          risus amet, risus. Consectetur quam blandit ut Senectus magna velit
-          tristique mi. Enim urna neque, habitasse vel justo, tortor et,
-          est.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-          integer porttitor non risus at risus amet, risus. Consectetur quam
+          I'm an experienced software engineer who constantly seeks out
+          innovative solutions to everyday problem I've honed my analytical
+          thinking and collaboration skills, and I love working with a team.
+          I've also had the opportunity to serve as the software engineer lead
+          for three projects with First Technology.,and my commitment to
+          critical thinking and attention to detail have gotten me to where I am
+          today a junior software engineer for First Technology. I have a
+          passion for processes, and I'm a junior developer who typically helps
+          other developers at any given time.
         </p>
         <a href="#" class="learn-more">learn More</a>
       </div>
     </section>
     <section class="services">
-      <h1>Services I offer</h1>
+      <h1><a name="services"></a>Services I offer</h1>
       <div class="services-container">
         <div class="services-box1">
           <img src="./images/web dev.png" />
@@ -143,24 +128,35 @@
 
         <div class="message">
           <h3>i would like to hear from you</h3>
-          <form>
-            <div class="name">
+          <form id="messages-form" action="POST">
+            <div>
               <input
                 type="text"
                 class="form-control"
                 placeholder="Enter name"
+                id="name"
+                required
               />
             </div>
             <div class="email">
-              <input type="email" id="Email" placeholder="Enter email" />
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter email"
+                required
+              />
             </div>
 
             <div class="textarea">
-              <textarea class="form-control" placeholder="Enter your message">
-              </textarea>
+              <textarea
+                class="form-control"
+                placeholder="Enter your message"
+                id="messageQuerry"
+                required
+              ></textarea>
             </div>
             <div class="submit-button">
-              <input type="submit" class="button" />
+              <button id="message-submit">submit</button>
             </div>
           </form>
         </div>
@@ -212,6 +208,13 @@
       window.onscroll = () => {
         navbar.classList.remove("active");
       };
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="./index.js"></script>
+         
     </script>
   </body>
 </html>
